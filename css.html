@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="prism.css">
+    <script src="prism.js"></script>
+    <title>Coding School/css</title>
+</head>
+<style>
+    * {
+        margin: 0px 0px;
+        /* padding: 0px; */
+    }
+
+    /* Styling for the navigation bar */
+
+    .nav-bar {
+        background-color: rgb(62, 64, 63);
+        color: aliceblue;
+        height: 6vh;
+        /* width: 100vw; */
+        /* margin-top: -50px; */
+        /* position: fixed; */
+    }
+
+    #left>img {
+        width: 2vw;
+        height: 3vh;
+        padding: 2px;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+
+    #center {
+        display: block;
+        /* border: 2px solid red; */
+        width: 33vw;
+        margin: auto;
+        margin-top: -25px;
+        color: black;
+        text-decoration: none;
+
+
+    }
+
+    #center>ul {
+        display: inline;
+    }
+
+    #center>ul>li {
+        display: inline;
+        color: aliceblue;
+        margin: 20px;
+
+    }
+
+    #center>ul>li>a {
+        color: aliceblue;
+        text-decoration: none;
+        font-family: 'Potta One', 'cursive';
+    }
+
+    #center > ul > li:hover{
+        background-color: rgb(100, 85, 85);
+        padding: 3px 10px;
+        border-radius: 10px;
+    }
+    #center > ul > li > a:active{
+        background-color: rgb(100, 85, 85);
+        padding: 3px 10px;
+        border-radius: 10px;
+    }
+
+    .container {
+        /* border: 2px solid red; */
+        width: 70vw;
+        height: 100vh;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    .title {
+        font-size: larger;
+    }
+
+    .container {
+        background-color: none;
+        padding: 20px;
+    }
+
+    .container>h2 {
+        color: brown;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .container>li {
+        font-family: 'Oswald', sans-serif;
+        color: rgb(214, 121, 28);
+    }
+
+    .container>pre {
+        cursor: pointer;
+    }
+    #box{
+        width: 100%;
+    }
+
+    @media only screen and (max-width:1357px) {
+        #left {
+            display: none;
+        }
+
+        #center>ul {
+            display: block;
+            margin-bottom: 0px;
+        }
+
+        #center>ul>li {
+            display: block;
+            margin: 5px 0px;
+            padding: 0px;
+        }
+
+        .container {
+            margin-top: 70px;
+        }
+
+        .nav-bar {
+            height: 15%;
+            width: 100%;
+        }
+
+        * {
+            margin: 12px 0px;
+        }
+        #box{
+            width: 100vw;
+        }
+
+    }
+</style>
+
+<body>
+    <div class="nav-bar">
+        <div id="left">
+            <img src="https://tse2.mm.bing.net/th?id=OIP.YVHX0ij0keoT4VdrS9mHBgHaHa&pid=Api&P=0" alt="Not loaded">
+        </div>
+        <div id="center">
+            <ul>
+                <li id="html"><a href="html.html">HTML</a></li>
+                <li><a href="css.html">CSS</a></li>
+                <li><a href="js.html">JavaScript</a></li>
+                <li><a href="python.html">Python</a></li>
+                <!-- <li><a href="java.html">Java</a></li> -->
+            </ul>
+        </div>
+        <div id="right">
+
+        </div>
+    </div>
+
+    <div class="container">
+
+        <h2>1.CSS Introduction</h2>
+        <br>
+        <li class="title">CSS Example</li>
+        <pre class="language-css"><code>
+            body {
+                background-color: lightblue;
+              }
+              
+              h1 {
+                color: white;
+                text-align: center;
+              }
+              
+              p {
+                font-family: verdana;
+                font-size: 20px;
+              }</code></pre>
+        <br><br>
+        <h2>2.CSS Selector</h2>
+        <br>
+        <li class="title">Element Selector</li>
+        <br>
+        <pre class="language-css"><code> 
+            p {
+                text-align: center;
+                color: red;
+              }
+                    </code></pre>
+        <br>
+        <br>
+
+        <li class="title">ID selector</li><br>
+
+        <pre class="language-css"><code> 
+            #para1 {
+                text-align: center;
+                color: red;
+              }
+                        </code></pre>
+        <br><br>
+        <li class="title">Class Selector</li>
+        <br>
+        <pre class="language-css"><code> 
+            .center {
+                text-align: center;
+                color: red;
+              }
+                        </code></pre>
+        <br><br>
+
+        <h2>3.Types of CSS</h2>
+        <!-- <li class="title"></li> -->
+        <br>
+        <li class="title">Inline CSS</li>
+        <pre class="language-html">
+        <code>&lt!DOCTYPE html&gt
+            &lthtml&gt
+            &ltbody&gt
+            
+            &lth1 style="color:blue;text-align:center;"&gtThis is a heading&lt/h1&gt
+            &ltp style="color:red;">This is a paragraph.&lt/p&gt
+            
+            &lt/body>
+            &lt/html&gt</code>
+    </pre>
+        <br><br>
+        <li class="title">Internal CSS</li>
+        <pre class="language-html">
+        <code>&lt!DOCTYPE html&gt
+            &lthtml&gt
+            &lthead&gt
+            &ltstyle&gt
+            body {
+              background-color: linen;
+            }
+            
+            h1 {
+              color: maroon;
+              margin-left: 40px;
+            }
+            &lt/style&gt
+            &lt/head&gt
+            &ltbody&gt
+            
+            &lth1>This is a heading&lt/h1&gt
+            &ltp>This is a paragraph.&lt/p&gt
+            
+            &lt/body&gt
+            &lt/html&gt</code></pre>
+        <br><br>
+        <li class="title">External CSS</li>
+        <pre class="language-html">
+        <code>&lthead&gt
+            &ltlink rel="stylesheet" type="text/css" href="mystyle.css"&gt
+            &ltstyle&gt
+            h1 {
+              color: orange;
+            }
+            &lt/style&gt
+            &lt/head&gt</code></pre>
+        <br><br>
+
+
+
+        <h2>4.Colors in CSS</h2>
+        <br><br>
+        <li class="title">Example</li>
+        <pre class="language-html">
+        <code>
+            &lth1 style="background-color:rgb(255, 99, 71);"&gt...&lt/h1&gt
+            &lth1 style="background-color:#ff6347;"&gt...&lt/h1&gt
+            &lth1 style="background-color:hsl(9, 100%, 64%);"&gt...&lt/h1&gt
+            
+            &lth1 style="background-color:rgba(255, 99, 71, 0.5);"&gt...&lt/h1&gt
+            &lth1 style="background-color:hsla(9, 100%, 64%, 0.5);"&gt...&lt/h1&gt
+        </code>
+    </pre>
+        <br><br>
+
+        <li class="title">Back-ground Color</li>
+        <pre class="language-css">
+        <code>h1 {
+            background-color: green;
+          }
+          
+          div {
+            background-color: lightblue;
+          }
+          
+          p {
+            background-color: yellow;
+          }</code>
+    </pre>
+        <br><br>
+        <h2>5.Margin & Padding</h2>
+        <br>
+        <li class="title">Margin</li>
+        <pre class="language-css">
+        <code>p {
+            margin-top: 100px;
+            margin-bottom: 100px;
+            margin-right: 150px;
+            margin-left: 80px;
+          }
+        /*Another way to write margin*/
+          p {
+            margin: 25px 50px 75px 100px;
+          }</code>
+    </pre>
+        <br><br>
+        <li class="title">Padding</li>
+        <br>
+        <pre class="language-css">
+        <code>div {
+            padding-top: 50px;
+            padding-right: 30px;
+            padding-bottom: 50px;
+            padding-left: 80px;
+          }
+
+        /*Another way to give Padding*/
+    
+        div {
+            padding: 25px 50px 75px 100px;
+          }</code>
+    </pre><br><br>
+        <li class="title">Height & Width</li><br>
+        <pre class="language-css">
+        <code>div {
+            height: 100px;
+            width: 500px;
+            background-color: powderblue;
+          }</code>
+    </pre><br><br>
+
+        <h2>6.CSS Tools</h2>
+        <br>
+        <li class="title">Box Model</li><br>
+        <img src="boxmodel.png" alt="Box Model" id="box"><br><br>
+        <li class="title">Fonts</li>
+        <br>
+        <pre class="language-css">
+        <code>.p1 {
+            font-family: "Times New Roman", Times, serif;
+          }
+          
+          .p2 {
+            font-family: Arial, Helvetica, sans-serif;
+          }
+          
+          .p3 {
+            font-family: "Lucida Console", "Courier New", monospace;
+          }</code>
+    </pre>
+        <br><br>
+        <li class="title">CSS icons</li>
+        <pre class="language-html">
+        <code>&lt!DOCTYPE html&gt
+            &lthtml&gt
+            &lthead&gt
+            &ltscript src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"&gt&lt/script&gt
+            &lt/head&gt
+            &ltbody&gt
+            
+            &lti class="fas fa-cloud">&lt/i&gt
+            &lti class="fas fa-heart">&lt/i&gt
+            &lti class="fas fa-car">&lt/i&gt
+            &lti class="fas fa-file">&lt/i&gt
+            &lti class="fas fa-bars">&lt/i&gt
+            
+            &lt/body&gt
+            &lt/html&gt</code>
+    </pre><br><br>
+
+    </div>
+</body>
+
+</html>

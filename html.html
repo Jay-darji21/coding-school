@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="prism.css">
+    <script src="prism.js"></script>
+    <title>Coding School/html</title>
+</head>
+<style>
+    *{
+        margin: 0px 0px;
+        /* padding: 0px; */
+    }
+  /* Styling for the navigation bar */
+    
+  .nav-bar {
+        background-color: rgb(62, 64, 63);
+        color: aliceblue;
+        height: 6vh;
+        /* width: 100vw; */
+        /* margin-top: -50px; */
+        /* position: fixed; */
+    }
+
+    #left>img {
+        width: 2vw;
+        height: 3vh;
+        padding: 2px;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+
+    #center {
+        display: block;
+        /* border: 2px solid red; */
+        width: 33vw;
+        margin: auto;
+        margin-top: -25px;
+        color: black;
+        text-decoration: none;
+
+
+    }
+
+    #center>ul {
+        display: inline;
+    }
+
+    #center>ul>li {
+        display: inline;
+        color: aliceblue;
+        margin: 20px;
+
+    }
+
+    #center>ul>li>a {
+        color: aliceblue;
+        text-decoration: none;
+        font-family: 'Potta One', 'cursive';
+    }
+
+
+    .container {
+        /* border: 2px solid red; */
+        width: 70vw;
+        height: 100vh;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    .title {
+        font-size: larger;
+    }
+
+    .container {
+        background-color: none;
+        padding: 20px;
+    }
+    .container > h2{
+        color: brown;
+        font-family: 'Roboto', sans-serif;
+    }
+    .container > li{
+        font-family: 'Oswald', sans-serif;
+        color: rgb(214, 121, 28);
+    }
+    .container > pre{
+        cursor: pointer;
+    }
+    #py{
+        width: 102%;
+    }
+    #datatype{
+        width: 70vw;
+    }
+    .hamburger{
+        display: none;
+    }
+    /* #html{
+        background-color: rgb(100, 85, 85);
+        padding: 3px 10px;
+        border-radius: 10px;
+    } */
+    #center > ul > li:hover{
+        background-color: rgb(100, 85, 85);
+        padding: 3px 10px;
+        border-radius: 10px;
+    }
+    #center > ul > li > a:active{
+        background-color: rgb(100, 85, 85);
+        padding: 3px 10px;
+        border-radius: 10px;
+    }
+
+    @media only screen and (max-width:1357px){
+        #left{
+            display: none;
+        }
+        #center>ul{
+            display: block;
+            margin-bottom: 0px;
+        }
+        #center>ul>li {
+            display: block;
+            margin: 5px 0px;
+            padding: 0px;
+        }
+        .container{
+            margin-top: 70px;
+        }
+        .nav-bar{
+            height: 15%;
+        }
+        *{
+            margin: 12px 0px;
+        }
+        
+    }
+</style>
+
+<body>
+    <div class="nav-bar">
+        <div id="left">
+            <img src="https://tse2.mm.bing.net/th?id=OIP.YVHX0ij0keoT4VdrS9mHBgHaHa&pid=Api&P=0" alt="Not loaded">
+        </div>
+        <div id="center">
+            <ul>
+                <li id="html"><a href="html.html">HTML</a></li>
+                <li><a href="css.html">CSS</a></li>
+                <li><a href="js.html">JavaScript</a></li>
+                <li><a href="python.html">Python</a></li>
+                <!-- <li><a href="java.html">Java</a></li> -->
+            </ul>
+        </div>
+        <div id="right">
+
+        </div>
+    </div>
+
+    <div class="container">
+
+        <h2>1.HTML boiler Plate</h2>
+        <pre class="language-html"><code>
+                &lt!DOCTYPE html&gt
+                &lthtml lang="en"&gt
+                &lthead&gt
+                    &ltmeta charset="UTF-8"&gt
+                    &ltmeta http-equiv="X-UA-Compatible" content="IE=edge"&gt
+                    &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
+                    &lttitle>Document&lt/title&gt
+                &lt/head&gt
+                &ltbody&gt
+                    
+                &lt/body&gt
+                &lt/html&gt</code></pre>
+        <br><br>
+        <h2>2.HTML Basic</h2>
+        <br>
+        <li class="title">Html headings</li>
+        <br>
+        <pre class="language-html"><code> 
+            &lth1&gtThis is heading 1&lt/h1&gt
+            &lth2&gtThis is heading 2&lt/h2&gt
+            &lth3&gtThis is heading 3&lt/h3&gt
+                    </code></pre>
+        <br>
+
+        <li class="title">Html Paragraph</li><br>
+
+        <pre class="language-html"><code> 
+            &ltp&gtThis is a paragraph.&lt/p&gt
+            &ltp&gtThis is another paragraph.&lt/p&gt
+                        </code></pre>
+        <br><br>
+        <li class="title">Html Links</li>
+        <br>
+        <pre class="language-html"><code> 
+            &lta href="https://www.google.com"&gtThis is a link&lt/a&gt
+                        </code></pre>
+        <br><br>
+        <li class="title">Html Images</li>
+        <br>
+        <pre class="language-html"><code> 
+            &ltimg src="w3schools.jpg" alt="" width="104" height="142"&gt
+                        </code></pre>
+        <br><br>
+
+    <h2>3.HTML Tags</h2>
+    <!-- <li class="title"></li> -->
+    <br>
+    <li class="title">CSS using style tag</li>
+    <pre class="language-html">
+        <code>&ltstyle&gt
+            body {background-color: powderblue;}
+            h1 {color: red;}
+            p {color: blue;}
+          &lt/style&gt</code>
+    </pre>
+    <br><br>
+    <li class="title">HTML links</li>
+    <pre class="language-html">
+        <code>&ltlink rel="stylesheet" href="mystyle.css"&gt</code></pre>
+        <br><br>
+    <li class="title">Meta Tags</li>
+    <pre class="language-html">
+        <code>&ltmeta charset="UTF-8"&gt
+            &ltmeta name="description" content="Free Web tutorials"&gt
+            &ltmeta name="keywords" content="HTML, CSS, JavaScript"&gt
+            &ltmeta name="author" content="John Doe"&gt</code></pre>
+            <br><br>
+            <li class="title">HTML script Tag</li>
+    <pre class="language-html">
+<code>
+    &ltscript&gt
+        function myFunction() {
+          document.getElementById("demo").innerHTML = "Hello JavaScript!";
+        }
+    &lt/script&gt
+</code></pre>
+<br><br>
+
+<li class="title">Default URL & Links</li>
+    <pre class="language-html">
+        <code>&lthead&gt
+            &ltbase href="https://www.w3schools.com/" target="_blank"&gt
+            &lt/head&gt
+            
+            &ltbody&gt
+            &ltimg src="images/stickman.gif" width="24" height="39" alt="Stickman"&gt
+            &lta href="tags/tag_base.asp"&gtHTML base Tag&lt/a&gt
+            &lt/body&gt</code>
+    </pre>
+    <br><br>
+<li class="title">For Responsive Website</li>
+<pre class="language-html">
+    <code>&ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt</code>
+</pre>
+<br><br>
+    <h2>4.HTML Form</h2>
+    <br><br>
+    <li class="title">Form tag</li>
+    <pre class="language-html">
+        <code>
+            &ltform&gt                
+                .
+                form elements
+                .
+                &lt/form&gt
+        </code>
+    </pre>
+    <br><br>
+
+    <li class="title">Input Tag</li>
+    <pre class="language-html">
+        <code>&ltform action="/action_page.php"&gt
+            &ltlabel for="fname">First name:&lt/label>&ltbr&gt
+            &ltinput type="text" id="fname" name="fname" value="John">&ltbr&gt
+            &ltlabel for="lname">Last name:&lt/label><br&gt
+            &ltinput type="text" id="lname" name="lname" value="Doe">&ltbr&gt&ltbr&gt
+            &ltinput type="submit" value="Submit"&gt
+          &lt/form&gt</code>
+    </pre>
+    <br><br>
+    <li class="title">Form Element</li>
+    <pre class="language-html">
+        <code>&ltlabel for="cars"&gtChoose a car:&lt/label&gt
+            &ltselect id="cars" name="cars"&gt
+              &ltoption value="volvo"&gtVolvo&lt/option&gt
+              &ltoption value="saab"&gtSaab&lt/option&gt
+              &ltoption value="fiat"&gtFiat&lt/option&gt
+              &ltoption value="audi"&gtAudi&lt/option&gt
+            &lt/select&gt</code> </pre>
+            <br><br>
+    <li class="title">Input type</li>
+    <pre class="language-html">
+    <code>        &ltinput type="button"&gt
+            &ltinput type="checkbox"&gt
+            &ltinput type="color"&gt
+            &ltinput type="date"&gt
+            &ltinput type="datetime-local"&gt
+            &ltinput type="email"&gt
+            &ltinput type="file"&gt
+            &ltinput type="hidden"&gt
+            &ltinput type="image"&gt
+            &ltinput type="month"&gt
+            &ltinput type="number"&gt
+            &ltinput type="password"&gt
+            &ltinput type="radio"&gt
+            &ltinput type="range"&gt
+            &ltinput type="reset"&gt
+            &ltinput type="search"&gt
+            &ltinput type="submit"&gt
+            &ltinput type="tel"&gt
+            &ltinput type="text"&gt
+            &ltinput type="time"&gt
+            &ltinput type="url"&gt
+            &ltinput type="week"&gt</code></pre>
+
+            <br><br>
+
+
+    </div>
+</body>
+
+</html>

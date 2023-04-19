@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="prism.css">
+    <script src="prism.js"></script>
+    <title>Coding School/JavaScript</title>
+</head>
+<style>
+    * {
+        margin: 0px 0px;
+        /* padding: 0px; */
+    }
+
+    /* Styling for the navigation bar */
+
+    .nav-bar {
+        background-color: rgb(62, 64, 63);
+        color: aliceblue;
+        height: 6vh;
+        /* width: 100vw; */
+        /* margin-top: -50px; */
+        /* position: fixed; */
+    }
+
+    #left>img {
+        width: 2vw;
+        height: 3vh;
+        padding: 2px;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+
+    #center {
+        display: block;
+        /* border: 2px solid red; */
+        width: 33vw;
+        margin: auto;
+        margin-top: -25px;
+        color: black;
+        text-decoration: none;
+
+
+    }
+
+    #center>ul {
+        display: inline;
+    }
+
+    #center>ul>li {
+        display: inline;
+        color: aliceblue;
+        margin: 20px;
+
+    }
+
+    #center>ul>li>a {
+        color: aliceblue;
+        text-decoration: none;
+        font-family: 'Potta One', 'cursive';
+    }
+
+    #center > ul > li:hover{
+        background-color: rgb(100, 85, 85);
+        padding: 3px 10px;
+        border-radius: 10px;
+    }
+    #center > ul > li > a:active{
+        background-color: rgb(100, 85, 85);
+        padding: 3px 10px;
+        border-radius: 10px;
+    }
+
+    .container {
+        /* border: 2px solid red; */
+        width: 70vw;
+        height: 100vh;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    .title {
+        font-size: larger;
+    }
+
+    .container {
+        background-color: none;
+        padding: 20px;
+    }
+
+    .container>h2 {
+        color: brown;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .container>li {
+        font-family: 'Oswald', sans-serif;
+        color: rgb(214, 121, 28);
+    }
+
+    .container>pre {
+        cursor: pointer;
+    }
+
+    #py {
+        width: 102%;
+    }
+
+    #datatype {
+        width: 70vw;
+    }
+
+    .hamburger {
+        display: none;
+    }
+    #operator{
+        width: 100%;
+    }
+
+    @media only screen and (max-width:1357px) {
+        #left {
+            display: none;
+        }
+
+        #center>ul {
+            display: block;
+            margin-bottom: 0px;
+        }
+
+        #center>ul>li {
+            display: block;
+            margin: 5px 0px;
+            padding: 0px;
+        }
+
+        .container {
+            margin-top: 70px;
+        }
+
+        .nav-bar {
+            height: 15%;
+        }
+
+        * {
+            margin: 12px 0px;
+        }
+        #operator{
+            width: 80vw;
+        }
+
+    }
+</style>
+
+<body>
+    <div class="nav-bar">
+        <div id="left">
+            <img src="https://tse2.mm.bing.net/th?id=OIP.YVHX0ij0keoT4VdrS9mHBgHaHa&pid=Api&P=0" alt="Not loaded">
+        </div>
+        <div id="center">
+            <ul>
+                <li id="html"><a href="html.html">HTML</a></li>
+                <li><a href="css.html">CSS</a></li>
+                <li><a href="js.html">JavaScript</a></li>
+                <li><a href="python.html">Python</a></li>
+                <!-- <li><a href="java.html">Java</a></li> -->
+            </ul>
+        </div>
+        <div id="right">
+
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>1.JavaScript Introduction</h2><br>
+        <li class="title">JS can change HTML</li><br>
+        <pre class="language-js"> <code>document.getElementById("demo").innerHTML = "Hello JavaScript";</code> </pre>
+        <br>
+
+        <li class="title">JS can change CSS</li>
+        <br>
+        <pre class="language-js"><code>document.getElementById("demo").style.fontSize = "35px";</code></pre><br>
+        <li class="title">JS where To</li>
+        <br>
+        <pre class="language-js">
+                <code>
+                /*Internal JavaScript*/
+
+                &ltscript&gt
+                document.getElementById("demo").innerHTML = "My First JavaScript";
+                &lt/script&gt
+
+                /*External JavScript*/
+
+                &ltscript src="myScript.js"&gt&lt/script&gt
+                </code></pre><br>
+
+        <h2>2.JavaScript Output</h2><br>
+        <li class="title">Example</li><br>
+        <pre class="language-js">
+            <code>&lt!DOCTYPE html&gt
+                &lthtml&gt
+                &ltbody&gt
+                
+                &lth1&gtMy First Web Page&lt/h1&gt
+                &ltp&gtMy First Paragraph&lt/p&gt
+                
+                &ltp id="demo">&lt/p&gt
+                
+                &ltscript&gt
+                document.getElementById("demo").innerHTML = 5 + 6;
+                &lt/script&gt
+                
+                &lt/body&gt
+                &lt/html&gt</code>
+        </pre><br>
+        <li class="title">Example</li><br>
+        <pre class="language-js">
+            <code>&lt!DOCTYPE html&gt
+                &lthtml&gt
+                &ltbody&gt
+                
+                &lth1&gtMy First Web Page&lt/h1&gt
+                &ltp&gtMy first paragraph.&lt/p&gt
+                
+                &ltscript&gt
+                document.write(5 + 6);
+                &lt/script&gt
+                
+                &lt/body&gt
+                &lt/html&gt</code>
+        </pre><br>
+
+        <h2>3.JS variable</h2><br>
+        <li class="title">Var</li><br>
+        <pre class="language-js">
+            <code>var x = 5;  //User can Redeclare the value of var 
+                  var y = 6;
+                  var z = x + y;</code></pre><br>
+        <li class="title">Let</li><br>
+        <pre class="language-js">
+           <code>let x = 5;  // User can not Redclare the value of let
+                let y = 6;
+                let z = x + y;</code></pre><br>
+        <li class="title">Const</li><br>
+        <pre class="language-js">
+
+          <code>const x = 5; // Value of const will never change
+            const y = 6;
+                const z = x + y;</code>
+        </pre><br>
+        <h2>4.Operators in JavaScript</h2><br>
+        <img src="js operator.png" alt="operators" id="operator">
+        <br><br>
+        <h2>5.Functions in JS</h2><br>
+        <li class="title">Syntax</li><br>
+        <pre class="language-js"><code>
+            // Function to compute the product of p1 and p2
+            function myFunction(p1, p2) {
+              return p1 * p2;
+            }
+        </code></pre><br>
+        <li class="title">Example</li><br>
+        <pre class="language-js"><code>
+            let x = myFunction(4, 3);   // Function is called, return value will end up in x
+
+        function myFunction(a, b) {
+        return a * b;             // Function returns the product of a and b
+        }
+        </code></pre><br>
+
+        <h2>6.Objects in JS</h2><br>
+        <li class="title">Example</li><br>
+        <pre class="language-js">
+            <code>const person = {
+                firstName: "John",
+                lastName: "Doe",
+                age: 50,
+                eyeColor: "blue"
+              };</code>
+        </pre><br>
+        <h2>7.Events</h2><br>
+        <li class="title">Example</li><br>
+        <pre class="language-js">
+            <code>&ltbutton onclick="this.innerHTML = Date()"&gtThe time is?&lt/button&gt</code>
+        </pre><br>
+        <li class="title">Example</li><br>
+        <pre class="language-js">
+            <code>&ltbutton onclick="document.getElementById('demo').innerHTML = Date()"&gtThe time is?&lt/button&gt</code>
+        </pre><br>
+        <li class="title">JS string</li><br>
+        <pre class="language-js">
+            <code>let answer1 = "It's alright";
+                let answer2 = "He is called 'Johnny'";
+                let answer3 = 'He is called "Johnny"';</code>
+        </pre><br>
+
+        <h2>8.Arrays in JS</h2><br>
+        <li class="title">Array Example</li><br>
+        <pre class="language-js">
+            <code>const cars = [];
+                cars[0]= "Saab";
+                cars[1]= "Volvo";
+                cars[2]= "BMW";</code>
+        </pre><br>
+        <li class="title">Example</li><br>
+        <pre class="language-js">
+            <code>const cars = new Array("Saab", "Volvo", "BMW");</code>
+        </pre><br>
+
+        <h2>9.JS if else</h2><br>
+        <li class="title">Syntax</li><br>
+        <pre class="language-js">
+            <code>if (condition) {
+                //  block of code to be executed if the condition is true
+              }</code>
+        </pre><br>
+        <li class="title">Example</li><br>
+        <pre class="language-js">
+            <code>if (hour &lt 18) {
+                greeting = "Good day";
+              }</code>
+        </pre><br>
+        <li class="title">Else statement syntax</li><br>
+        <pre class="language-js">
+            <code>if (condition) {
+                //  block of code to be executed if the condition is true
+              } else {
+                //  block of code to be executed if the condition is false
+              }</code>
+        </pre><br>
+        <li class="title">Else statement Example</li><br>
+        <pre class="language-js">
+            <code>if (hour &lt 18) {
+                greeting = "Good day";
+              } else {
+                greeting = "Good evening";
+              }</code>
+        </pre><br>
+        <li class="title">Else if syntax</li><br>
+        <pre class="language-js">
+            <code>if (condition1) {
+                //  block of code to be executed if condition1 is true
+              } else if (condition2) {
+                //  block of code to be executed if the condition1 is false and condition2 is true
+              } else {
+                //  block of code to be executed if the condition1 is false and condition2 is false
+              }</code>
+        </pre><br>
+        <li class="title">Else if syntax</li><br>
+        <pre class="language-js">
+            <code>if (time &lt 10) {
+                greeting = "Good morning";
+              } else if (time &lt 20) {
+                greeting = "Good day";
+              } else {
+                greeting = "Good evening";
+              }</code>
+        </pre><br>
+
+        <h2>10.JS switch statement</h2><br>
+        <li class="title">Syntax</li><br>
+        <pre class="language-js">
+            <code>switch(expression) {
+                case x:
+                  // code block
+                  break;
+                case y:
+                  // code block
+                  break;
+                default:
+                  // code block
+              }</code>
+        </pre><br>
+        <li class="title">Example</li><br>
+        <pre class="language-js">
+            <code>switch (new Date().getDay()) {
+                case 0:
+                  day = "Sunday";
+                  break;
+                case 1:
+                  day = "Monday";
+                  break;
+                case 2:
+                   day = "Tuesday";
+                  break;
+                case 3:
+                  day = "Wednesday";
+                  break;
+                case 4:
+                  day = "Thursday";
+                  break;
+                case 5:
+                  day = "Friday";
+                  break;
+                case 6:
+                  day = "Saturday";
+              }</code>
+        </pre><br>
+
+        <h2>11.Loops in JS</h2><br>
+        <li class="title">For loop</li><br>
+        <pre class="language-js">
+            <code>/*Insted of Writing*/
+                text += cars[0] + "&ltbr&gt";
+                text += cars[1] + "&ltbr&gt";
+                text += cars[2] + "&ltbr&gt";
+                text += cars[3] + "&ltbr&gt";
+                text += cars[4] + "&ltbr&gt";
+                text += cars[5] + "&ltbr&gt";
+
+            /*You can Write this*/
+                for (let i = 0; i &lt cars.length; i++) {
+                text += cars[i] + "&ltbr&gt";
+                }</code></pre><br>
+        <li class="title">For loop syntax</li><br>
+        <pre class="language-js">
+            <code>for (expression 1; expression 2; expression 3) {
+                // code block to be executed
+              }</code></pre><br>
+        <li class="title">For loop Example</li><br>
+        <pre class="language-js">
+            <code>for (let i = 0; i &lt 5; i++) {
+                text += "The number is " + i + "<br>";
+              }</code></pre><br>
+
+        <li class="title">While Loop Syntax</li><br>
+        <pre class="language-js">
+        <code>while (condition) {
+            // code block to be executed
+          }</code>
+       </pre><br>
+        <li class="title">While Loop Example</li><br>
+        <pre class="language-js">
+        <code>while (i &lt 10) {
+            text += "The number is " + i;
+            i++;
+          }</code></pre><br>
+        <li class="title">While Loop Example</li><br>
+        <pre class="language-js">
+        <code>const cars = ["BMW", "Volvo", "Saab", "Ford"];
+            let i = 0;
+            let text = "";
+            
+            for (;cars[i];) {
+              text += cars[i];
+              i++;
+            }</code></pre><br>
+
+        <h2>12.Functions in JS</h2><br>
+        <li class="title">Syntax</li><br>
+        <pre class="language-js">
+            <code>function functionName(parameters) {
+                // code to be executed
+              }</code>
+        </pre><br>
+
+        <li class="title">Example</li><br>
+        <pre class="language-js">
+            <code>function myFunction(a, b) {
+                return a * b;
+              }</code>
+        </pre><br>
+
+        <li class="title">Function call</li><br>
+        <pre class="language-js">
+            <code>const person = {
+                firstName:"John",
+                lastName: "Doe",
+                fullName: function () {
+                  return this.firstName + " " + this.lastName;
+                }
+              }
+              
+              // This will return "John Doe":
+              person.fullName();  </code>
+        </pre><br>
+
+
+    </div>
+
+
+</body>
+
+</html>

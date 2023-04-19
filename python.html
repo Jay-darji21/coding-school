@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="prism.css">
+    <script src="prism.js"></script>
+    <title>Coding School/python</title>
+</head>
+<style>
+    *{
+        margin: 0px 0px;
+        background-color: rgba(255, 255, 255, 0);
+        /* padding: 0px; */
+    }
+  /* Styling for the navigation bar */
+    
+  .nav-bar {
+        background-color: rgb(62, 64, 63);
+        color: aliceblue;
+        height: 6vh;
+        /* width: 100vw; */
+        /* margin-top: -50px; */
+        /* position: fixed; */
+    }
+
+    #left>img {
+        width: 2vw;
+        height: 3vh;
+        padding: 2px;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+
+    #center {
+        display: block;
+        /* border: 2px solid red; */
+        width: 33vw;
+        margin: auto;
+        margin-top: -25px;
+        color: black;
+        text-decoration: none;
+
+
+    }
+
+    #center>ul {
+        display: inline;
+    }
+
+    #center>ul>li {
+        display: inline;
+        color: aliceblue;
+        margin: 20px;
+
+    }
+
+    #center>ul>li>a {
+        color: aliceblue;
+        text-decoration: none;
+        font-family: 'Potta One', 'cursive';
+    }
+
+    #center > ul > li:hover{
+        background-color: rgb(100, 85, 85);
+        padding: 3px 10px;
+        border-radius: 10px;
+    }
+    #center > ul > li > a:active{
+        background-color: rgb(100, 85, 85);
+        padding: 3px 10px;
+        border-radius: 10px;
+    }
+    .container {
+        /* border: 2px solid red; */
+        width: 70vw;
+        height: 100vh;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    .title {
+        font-size: larger;
+    }
+
+    .container {
+        background-color: none;
+        padding: 20px;
+    }
+    .container > h2{
+        color: brown;
+        font-family: 'Roboto', sans-serif;
+    }
+    .container > li{
+        font-family: 'Oswald', sans-serif;
+        color: rgb(214, 121, 28);
+    }
+    .container > pre{
+        cursor: pointer;
+    }
+    #py{
+        width: 100%;
+    }
+    #datatype{
+        width: 70vw;
+        
+    }
+    .hamburger{
+        display: none;
+    }
+
+    @media only screen and (max-width:1357px){
+        #left{
+            display: none;
+        }
+        #center>ul{
+            display: block;
+            margin-bottom: 0px;
+        }
+        #center>ul>li {
+            display: block;
+            margin: 5px 0px;
+            padding: 0px;
+        }
+        .container{
+            margin-top: 70px;
+        }
+        .nav-bar{
+            height: 15%;
+        }
+        *{
+            margin: 12px 0px;
+        }
+        
+    }
+
+</style>
+<body>
+    <div class="nav-bar">
+        <div id="left">
+            <img src="https://tse2.mm.bing.net/th?id=OIP.YVHX0ij0keoT4VdrS9mHBgHaHa&pid=Api&P=0" alt="Not loaded">
+        </div>
+        <div id="center">
+            <ul>
+                <li><a href="html.html">HTML</a></li>
+                <li><a href="css.html">CSS</a></li>
+                <li><a href="js.html">JavaScript</a></li>
+                <li><a href="python.html">Python</a></li>
+                <!-- <li><a href="java.html">Java</a></li> -->
+            </ul>
+        </div>
+        <div id="right">
+
+        </div>
+    </div>
+    <div class="container">
+        <h2>1.Python Intoduction</h2><br>
+        <li class="title">Python Example</li><br>
+        <pre class="language-python">
+            <code>print("Hello, World!")</code>
+        </pre><br>
+        <li class="title">Python syntax</li><br>
+        <pre class="language-python">
+            <code>if 5 > 2:
+                print("Five is greater than two!")</code>
+        </pre><br>
+        <li class="title">Python comments</li><br>
+        <pre class="language-python">
+            <code>#This is a comment
+                print("Hello, World!")</code>
+        </pre><br>
+
+        <h2>2.Python Variable</h2><br>
+        <li class="title">Example</li><br>
+        <pre class="language-python">
+            <code>x = 5
+                y = "John"
+                print(x)
+                print(y)</code>
+        </pre><br>
+        <li class="title">Variable Names</li><br>
+        <pre class="language-python">
+            <code>myvar = "John"
+                my_var = "John"
+                _my_var = "John"
+                myVar = "John"
+                MYVAR = "John"
+                myvar2 = "John"</code>
+        </pre><br>
+        <li class="title">Assign multiple values</li><br>
+        <pre class="language-python">
+            <code>x, y, z = "Orange", "Banana", "Cherry"
+                print(x)
+                print(y)
+                print(z)</code>
+        </pre><br>
+        <li class="title">Assign multiple values  - -> Example</li><br>
+        <pre class="language-python">
+            <code>x = y = z = "Orange"
+                print(x)
+                print(y)
+                print(z)</code>
+        </pre><br>
+        <li class="title">Assign multiple values  - -> Example</li><br>
+        <pre class="language-python">
+            <code>fruits = ["apple", "banana", "cherry"]
+                x, y, z = fruits
+                print(x)
+                print(y)
+                print(z)</code>
+        </pre><br>
+        <li class="title">Output Variable</li><br>
+        <pre class="language-python">
+            <code>x = "Python"
+                y = "is"
+                z = "awesome"
+                print(x, y, z)</code>
+        </pre><br>
+
+        <h2>3.Python Datatypes</h2><br>
+        <img src="pyhon datatype.png" alt="datatypes" id="datatype"><br>
+
+        <h2>4.Python Operators</h2><br>
+        <img src="js operator.png" alt="datatypes" id="py"><br>
+
+    </div>
+    <script>
+        // JavaScript to toggle the responsive navigation bar
+        function toggleNav() {
+          var x = document.getElementById("myNavbar");
+          if (x.className === "navbar") {
+            x.className += " responsive";
+          } else {
+            x.className = "navbar";
+          }
+        }
+      </script>
+</body>
+</html>
